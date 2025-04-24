@@ -49,6 +49,12 @@ We welcome contributions from the community! If you would like to help improve t
 ### Review Process
 Once you open a pull request, it will be reviewed by the documentation maintainers. Feedback will be provided, and once approved, the changes will be merged into the repository.
 
+### Deployment Process
+
+(For snippets staff)
+Once the changes have been made, to deploy to production on github pages run:
+`ghp-import -n -p -f site/`
+
 ## 📄 License
 
 This documentation is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
@@ -60,3 +66,4 @@ This documentation is licensed under the **MIT License**. See the [LICENSE](LICE
 If you have any questions about the documentation or encounter issues while contributing, please feel free to open an issue in the GitHub Issues section of this repository.
 
 For any other inquiries or support requests, you can also contact us directly at [lewis@snippets3d.com] or via discord at [https://discord.com/invite/U8UEUhm6Bn].
+
