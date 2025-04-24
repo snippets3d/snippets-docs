@@ -53,7 +53,7 @@ Once you open a pull request, it will be reviewed by the documentation maintaine
 
 (For snippets staff)
 Once the changes have been made, to deploy to production on github pages run:
-`ghp-import -n -p -f site/`
+`make deploy`
 
 ## 📄 License
 

@@ -16,3 +16,6 @@ serve:
 
 build:
 	$(ACTIVATE); mkdocs build
+
+deploy:
+	$(ACTIVATE); ghp-import -n -p -f site/
