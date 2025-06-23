@@ -55,6 +55,11 @@ Once you open a pull request, it will be reviewed by the documentation maintaine
 Once the changes have been made, to deploy to production on github pages run:
 `make deploy`
 
+If you run into github issues   `subprocess.CalledProcessError: Command '['git', 'push', 'origin', 'gh-pages', '--force']' returned non-zero exit status 128.`
+Then install gh with `sudo apt install gh` then run 
+`gh auth login` and login with SSH. maybe https will work too.
+
+
 ## 📄 License
 
 This documentation is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
