@@ -4,7 +4,9 @@ theme:
   name: material
   palette:
     scheme: 'slate'  # This sets the theme to a dark palette
-    primary: 'blue'  # Change primary color (e.g., links, buttons)
+    primary: 'custom'  # Change primary color (e.g., links, buttons)
     accent: 'blue'  # Accent color
-  logo: 'assets/images/snippets-logo.png'  # Optional: If you want to add a logo
+  logo: 'assets/images/snippets_logo_dark_bg.svg'  # Optional: If you want to add a logo
   favicon: 'assets/images/favicon.ico'  # Optional: Add a favicon
+extra_css:
+- stylesheets/extra.css
