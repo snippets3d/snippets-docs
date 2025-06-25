@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.snippets3d.com/</loc>
-         <lastmod>2025-04-24</lastmod>
+         <lastmod>2025-06-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.snippets3d.com/create%20your%20first%20snippet/</loc>
+         <lastmod>2025-06-25</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.snippets3d.com/installation/</loc>
+         <lastmod>2025-06-25</lastmod>
     </url>
 </urlset>
