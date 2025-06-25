@@ -14,7 +14,6 @@ bash:
 serve:
 	$(ACTIVATE); mkdocs serve
 
-
 serve-mike:
 	$(ACTIVATE); mike serve
 
@@ -25,7 +24,6 @@ set_default_version:
 # make build_version VERSION="your-version-here-1.0"
 build_version:
 	$(ACTIVATE); mike deploy --push $(VERSION) latest --update-aliases
-
 
 # make delete_version VERSION="your-version-here-1.0"
 delete_version:
