@@ -14,8 +14,25 @@ bash:
 serve:
 	$(ACTIVATE); mkdocs serve
 
-build:
-	$(ACTIVATE); mkdocs build
+
+serve-mike:
+	$(ACTIVATE); mike serve
+
+# make set_default_version VERSION="your-version-here-1.0"
+set_default_version:
+	mike set-default $(VERSION)
+
+# make build_version VERSION="your-version-here-1.0"
+build_version:
+	$(ACTIVATE); mike deploy --push $(VERSION) latest --update-aliases
+
+
+# make delete_version VERSION="your-version-here-1.0"
+delete_version:
+	$(ACTIVATE); mike delete $(VERSION)
+
+list_versions:
+	$(ACTIVATE); mike list
 
 deploy:
 	$(ACTIVATE); ghp-import -n -p -f site/

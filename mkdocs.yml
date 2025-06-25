@@ -2,6 +2,9 @@ site_name: Documentation
 site_url: https://docs.snippets3d.com
 theme:
   name: material
+  features:
+      - version
+      - content.code.copy
   palette:
     scheme: 'slate'  # This sets the theme to a dark palette
     primary: 'custom'  # Change primary color (e.g., links, buttons)
@@ -10,3 +13,9 @@ theme:
   favicon: 'assets/images/favicon.ico'  # Optional: Add a favicon
 extra_css:
 - stylesheets/extra.css
+extra:
+  version:
+    provider: mike
+plugins:
+  - mike:
+      canonical_version: latest

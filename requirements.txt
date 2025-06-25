@@ -1,2 +1,3 @@
 mkdocs-material==9.6.12
 ghp-import==2.1.0
+mike==2.1.3
