@@ -1,0 +1,549 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.snippets3d.com/latest/SDK/create-a-snippet-template/">
+      
+      
+        <link rel="prev" href="../../getting-started/sdk-first-import/">
+      
+      
+        <link rel="next" href="../customizing-folders/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>Create a Snippet Template - Snippets SDK Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2afb09e1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Snippets SDK Documentation" class="md-header__button md-logo" aria-label="Snippets SDK Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/snippets_logo_dark_bg.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Snippets SDK Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Create a Snippet Template
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Snippets SDK Documentation" class="md-nav__button md-logo" aria-label="Snippets SDK Documentation" data-md-component="logo">
+      
+  <img src="../../assets/images/snippets_logo_dark_bg.svg" alt="logo">
+
+    </a>
+    Snippets SDK Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting Started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/create-your-first-snippet-set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Your First Snippet Set
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/previewing-and-publishing-snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Previewing and Publishing Snippets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/sdk-installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SDK Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/sdk-first-import/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SDK First Import
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SDK
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            SDK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create a Snippet Template
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customizing-folders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Customizing Folders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../definitions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Definitions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Create a Snippet Template</h1>
+
+<p><strong>Introduction</strong> </p>
+<p>As a developer, you can create your own Snippet template that will define how the Snippets of the Snippets Set you created online are displayed in your Unity project. This is a very flexible system that allows you, the developer, to customize how you want your Snippets to be shown to the user.</p>
+<p>For every Snippet that you will generate, the system will create a prefab variant of a template prefab. You can find a sample template prefab to start from in the folder <code>Packages/com.snippets.sdk/Editor/SnippetsTemplates/SnippetTemplate.prefab</code>. You have to copy this prefab and paste it into your Asset folder so that you can modify it according to your needs.</p>
+<p>This is the structure of the base prefab:</p>
+<ul>
+<li>
+<p>The child <strong>TextPlayer</strong>, which contains the script <code>SnippetTmpTextPlayer</code>, is responsible for showing the text of the Snippet. This is particularly important for accessibility purposes, as it allows the Snippet to be read by screen readers. The script has a parameter, <em>Disable Text When Not Playing</em> that allows you to show the text only when the character is speaking, and hide it otherwise. Its child, <strong>TextLabel</strong>, has a <code>TextMeshPro</code> component that you can modify to change the text style as you want. Notice that if you want, you can also change the whole logic of the text management, by not using the <code>SnippetTmpTextPlayer</code> script, but using your own script that inherits from the base class <code>SnippetTextPlayer</code> and that manages the text display.</p>
+</li>
+<li>
+<p>The child <strong>AudioPlayer</strong>, which contains the script <code>SnippetAudioSourceSoundPlayer</code>, is responsible for playing the audio of the Snippet. The script plays the audio through the Unity Audio System, and it is associated to an <code>AudioSource</code> contained in the child <strong>AudioSource</strong>. Also in this case, you can change the audio settings of the <code>AudioSource</code> as you want. Notice that you can also change the whole logic of the audio management, by not using the <code>SnippetAudioSourceSoundPlayer</code> script, but using your own script that inherits from the base class <code>SnippetSoundPlayer</code> and that manages the audio playback.</p>
+</li>
+<li>
+<p>The child <strong>AvatarPlayer</strong>, which contains the script <code>SnippetAvatarAnimatorPlayer</code>, is responsible for showing the avatar of the Snippet and playing its animations. In the default template there is a child of this element that has the very telling name <em>Substitute-this-with-your-avatar</em>. You can choose to do two things with this child: you can do nothing, and in that case, the system will try to take the avatar from the data saved on the server; or you can substitute this gameobject with an avatar featuring a skinned mesh render and a bone structure compatible with the avatar you selected online. What happens is that in the first case, the generated Snippets will have the avatar you selected online, while in the second case you will have the avatar that you put as a child of this gameobject. Notice that if you want, you can also change the whole logic of the avatar management, by not using the <code>SnippetAvatarAnimatorPlayer</code> script, but using your own script that inherits from the base class <code>SnippetAvatarPlayer</code> and that manages the avatar animation display.</p>
+</li>
+<li>
+<p>The main root object <strong>SnippetTemplate</strong> has the script <code>SnippetPlayer</code> that is responsible for the coordination of all the children gameobjects. It ensures that the avatar animation is playing together with the audio file and the text writing. You should assign to the field <em>Snippet Text Player</em>, <em>Snippet Sound Player</em>, and <em>Snippet Avatar Player</em> the corresponding children of the prefab. You can also not assign some of them if you don't want that playback feature to be used: for instance, if you leave the Snippet Sound Player to null, the avatar will show the animation and the text, but have no sound. This allows for full flexibility of visualization. There is an additional parameter, <em>Play On Enable</em>, that allows you to choose if the Snippet should start playing as soon as it is instantiated, or if it should wait for a manual call to the <code>Play()</code> method to start playing. This is useful if you want to instantiate the Snippet prefab and then play it later, for instance when the user clicks on a button.</p>
+</li>
+</ul>
+<p>If you are in doubt about how to create your own Snippet template, you can start by using the default one.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["version", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
