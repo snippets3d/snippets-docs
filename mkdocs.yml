@@ -19,3 +19,17 @@ extra:
 plugins:
   - mike:
       canonical_version: latest
+site_name: Snippets SDK Documentation
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Create Your First Snippet Set: getting-started/create-your-first-snippet-set.md
+      - Previewing and Publishing Snippets: getting-started/previewing-and-publishing-snippets.md
+      - SDK Installation: getting-started/sdk-installation.md
+      - SDK First Import: getting-started/sdk-first-import.md
+  - SDK:
+      - Create a Snippet Template: SDK/create-a-snippet-template.md
+      - Customizing Folders: SDK/customizing-folders.md
+  - Definitions: definitions.md
+
