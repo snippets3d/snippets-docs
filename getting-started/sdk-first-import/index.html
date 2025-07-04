@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-use" class="md-skip">
+        <a href="#import-your-first-snippet-into-the-sdk" class="md-skip">
           Skip to content
         </a>
       
@@ -305,6 +305,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -337,6 +339,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -345,9 +349,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
+  <a href="#1-log-in-to-snippets" class="md-nav__link">
     <span class="md-ellipsis">
-      How to use
+      1. Log in to Snippets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-access-to-your-list-of-snippet-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Access to your list of Snippet Sets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-perform-operations-on-the-snippet-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Perform operations on the Snippet Sets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-use-the-snippets-in-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Use the Snippets in your project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-enjoy-the-snippets-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Enjoy the Snippets SDK!
     </span>
   </a>
   
@@ -499,6 +539,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -507,9 +549,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
+  <a href="#1-log-in-to-snippets" class="md-nav__link">
     <span class="md-ellipsis">
-      How to use
+      1. Log in to Snippets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-access-to-your-list-of-snippet-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Access to your list of Snippet Sets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-perform-operations-on-the-snippet-sets" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Perform operations on the Snippet Sets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-use-the-snippets-in-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Use the Snippets in your project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-enjoy-the-snippets-sdk" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Enjoy the Snippets SDK!
     </span>
   </a>
   
@@ -531,18 +609,17 @@
 
 
 
-  <h1>SDK First Import</h1>
-
-<h3 id="how-to-use">How to use</h3>
+<h1 id="import-your-first-snippet-into-the-sdk">Import your first Snippet into the SDK</h1>
 <p>Once the Snippets SDK is installed, you can immediately start to use it create your own snippets. This is a quick guide to get you started:</p>
-<p><strong>Import your first Snippet</strong></p>
-<p>1. <strong>Log in to Snippets</strong></p>
+<hr />
+<h2 id="1-log-in-to-snippets">1. <strong>Log in to Snippets</strong></h2>
 <p>To use the Snippets SDK, you need to log in to your Snippets account. You can do this by opening the Snippets menu in Unity and clicking on <em>Login</em>. This will open a small UI window where you can enter your credentials. This is fundamental so that you can access from Unity the Snippets that you created on the web portal.</p>
-<p>2. <strong>Access to your list of Snippet Sets</strong></p>
+<hr />
+<h2 id="2-access-to-your-list-of-snippet-sets">2. <strong>Access to your list of Snippet Sets</strong></h2>
 <p>Once you are logged in, you can access your list of Snippet Sets by opening the Snippets menu in Unity and clicking on <em>Show User's Snippet Sets</em>. This will open a window where you can see all the Snippet Sets you created on the web portal and what is their current importing status.</p>
 <p>Every Snippet Set will appear in the list with its thumbnail and its name. After the name, there may be some tag in square brackets that indicates some special status of the Snippet Set:</p>
 <ul>
-<li><code>[Processing]</code> means that the Snippet Set is being processed by the server and it is not yet ready to be used yet</li>
+<li><code>[Processing]</code> means that the Snippet Set is being processed by the server and it is not yet ready to be used yet. This applies even if the snippet is not published yet</li>
 <li><code>[Imported]</code> means that the Snippet Set has already been successfully imported in your project and you can use it</li>
 <li><code>[Local Deprecated]</code> means that the Snippet Set has already been successfully imported in your project, but it has actually been deleted on the cloud (so only the local version of the Snippet Set exists)</li>
 </ul>
@@ -552,11 +629,12 @@
 <li><strong>Update</strong> means that the Snippet Set has been imported in your project but there is an updated version on the cloud. You can click on this button to update the local version of the Snippet Set</li>
 <li><strong>Remove</strong> means that the Snippet Set has been imported in your project, and you can click on this button to delete the local version of it</li>
 </ul>
-<p>3. <strong>Perform operations on the Snippet Sets</strong></p>
+<hr />
+<h2 id="3-perform-operations-on-the-snippet-sets">3. <strong>Perform operations on the Snippet Sets</strong></h2>
 <p>Once you have your Snippet Sets list, you can perform some operations on them directly from the Snippet Sets window. The operations you can perform are:</p>
 <ul>
 <li>
-<p><strong>Import a Snippet Set</strong>: To import a Snippet Set, you can click on the <em>Import</em> button next to the Snippet Set you want to import. The system will show you a window asking what is the template prefab you want to use for the Snippets of that Snippet Set. You can choose the template prefab created in the <a href="/getting-started/sdk-installation">previous guide</a>, or you can <a href="/create-a-snippet-template">create a new one</a>. Once you select the prefab, you can click the <em>Import</em> button and the system will start the import process, at first downloading the raw data of the Snippets, and then generating the prefabs of the Snippets in the folder you configured in the previous step. If everything went smoothly, you will have the Snippet prefabs generated in the folder you configured. If something went wrong, you will see an error message in the console.</p>
+<p><strong>Import a Snippet Set</strong>: To import a Snippet Set, you can click on the <em>Import</em> button next to the Snippet Set you want to import. The system will show you a window asking what is the template prefab you want to use for the Snippets of that Snippet Set. You can choose the template prefab created in the <a href="/getting-started/sdk-installation">previous guide</a>, or you can <a href="/create-a-snippet-template">create a new one</a>. Select the prefab from your folder (NOT from the scene). You can now click the <em>Import</em> button and the system will start the import process, at first downloading the raw data of the Snippets, and then generating the prefabs of the Snippets in the folder you configured in the previous step. If everything went smoothly, you will have the Snippet prefabs generated in the folder you configured, By default, your snippets can be found in Snippets/Generated. If something went wrong, you will see an error message in the console.</p>
 </li>
 <li>
 <p><strong>Remove a Snippet Set</strong>: To remove a Snippet Set, you can click on the <em>Remove</em> button next to the Snippet Set you want to remove. The system will ask you to confirm the removal in a dialogue window, and once you confirm it, it will delete the local version of the Snippet Set, both the raw data and the generated prefabs. If you were using the Snippet prefabs in some scene, they will become invalid. Notice that if the Snippet Set was imported from the cloud, it will still exist on the cloud, but it will not be available in your project anymore.</p>
@@ -565,9 +643,11 @@
 <p><strong>Update a Snippet Set</strong>: To update a Snippet Set, you can click on the <em>Update</em> button next to the Snippet Set you want to update. Notice that the button will appear only if there is an updated version of the Snippet Set on the cloud. The dialogue window for the Update process is mostly identical to the one of the Import process. Be careful that in the current implementation, the Update process consists in removing the local version of the Snippet Set and then importing it again from the cloud. This means that you will lose any changes you made to the Snippet prefabs, and you will also lose any reference you had to your prefabs in your scenes, so be careful when using this feature. We plan to improve the update process to make it less disruptive in a future version of our SDK.</p>
 </li>
 </ul>
-<p>4. <strong>Use the Snippets in your project</strong></p>
+<hr />
+<h2 id="4-use-the-snippets-in-your-project">4. <strong>Use the Snippets in your project</strong></h2>
 <p>Once you have imported the Snippets Sets you want to use, you can start using the Snippets in your project. You can do this by instantiating the Snippet prefab you generated in the previous step. The Snippet prefab will have the <code>SnippetPlayer</code> component that you can use to control the playback of the Snippet. You can call the <code>Play()</code> method to start playing the Snippet, and you can also stop it by calling the <code>Stop()</code> method. The <code>SnippetPlayer</code> component also has two events: <code>PlaybackStarted</code> and <code>PlaybackStopped</code> that you can use to perform actions when the playback starts or finishes: for instance, you can start the playback of a second Snippet when the first one finishes, or you can show a UI message when the playback starts, etc...</p>
-<p>5. <strong>Enjoy the Snippets SDK!</strong></p>
+<hr />
+<h2 id="5-enjoy-the-snippets-sdk">5. <strong>Enjoy the Snippets SDK!</strong></h2>
 <p>You now know how to use the Snippets SDK in your project. Have fun!</p>
 
 
