@@ -1,5 +1,5 @@
 # Define the virtual environment directory
-VENV_DIR = venv/bin/activate
+VENV_DIR = venv/Scripts/activate
 
 # Function to activate the virtual environment
 ACTIVATE = . $(VENV_DIR)

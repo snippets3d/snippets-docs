@@ -45,7 +45,11 @@ Once you have your Snippet Sets list, you can perform some operations on them di
 Once you have imported the Snippets Sets you want to use, you can start using the Snippets in your project. You can do this by instantiating the Snippet prefab you generated in the previous step. The Snippet prefab will have the `SnippetPlayer` component that you can use to control the playback of the Snippet. You can call the `Play()` method to start playing the Snippet, and you can also stop it by calling the `Stop()` method. The `SnippetPlayer` component also has two events: `PlaybackStarted` and `PlaybackStopped` that you can use to perform actions when the playback starts or finishes: for instance, you can start the playback of a second Snippet when the first one finishes, or you can show a UI message when the playback starts, etc...
 
 ---
+##5\. **Enable legacy animations**
 
-##5\. **Enjoy the Snippets SDK!**
+If you encounter the error "Recording used by the animation component must be marked as Legacy", this is due to the way ReadyPlayerMe imports avatars. One additional step is required for your snippets animations to play. You must go into the "raw" folder for the affected snippet, select the animation file and in the import settings change from mecanim to legacy.
+
+---
+##6\. **Enjoy the Snippets SDK!**
 
 You now know how to use the Snippets SDK in your project. Have fun!
