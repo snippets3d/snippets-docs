@@ -29,6 +29,12 @@ nav:
       - SDK Installation: getting-started/sdk-installation.md
       - SDK First Import: getting-started/sdk-first-import.md
   - SDK:
+      - Bringing Imported Snippets Into a Scene: SDK/bringing-imported-snippets-into-a-scene.md
+      - Setting Up a Scene With Helper Tools: SDK/setting-up-a-scene-with-helper-tools.md
+      - Template and Playback Modes: SDK/template-and-playback-modes.md
+      - Helper Tools Reference: SDK/helper-tools-reference.md
+      - Programmer Integration Guide: SDK/programmer-integration-guide.md
+      - Validation and Troubleshooting: SDK/validation-and-troubleshooting.md
       - Create a Snippet Template: SDK/create-a-snippet-template.md
       - Customizing Folders: SDK/customizing-folders.md
   - Definitions: definitions.md

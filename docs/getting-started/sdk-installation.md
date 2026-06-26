@@ -1,58 +1,113 @@
 # How to install the Snippet SDK
 
-Follow these steps to install the Snippets SDK:
+Snippets SDK for Unity  
+Implementation and Usage Guide
 
-##1\. **Add OpenUPM to the scoped registries of your project**
-Open the Packages/manifest.json file in the folder of your project and add the following lines:
-```
+---
+
+## 1. Introduction
+
+The Snippets SDK is the Unity integration layer for Snippets content. It connects your Unity project to the Snippets platform so you can import Snippet Sets created on the web portal, generate ready-to-use Unity prefabs, and play them in your scenes with synchronized animation, audio, and text.
+
+In practice, the SDK covers two needs:
+
+1. Content operations in the Unity Editor: login, browse sets, import/update/remove sets, generate prefabs.
+2. Runtime playback in scenes: play snippets directly or orchestrate them with helper tools for actor control, movement, flow sequencing, and gaze behavior.
+
+Mental model:
+
+1. Create and publish content in the Snippets portal.
+2. Import that content into Unity through the SDK.
+3. Choose your playback mode: standalone snippet playback or controller-based orchestration.
+
+![01-introduction-overview.png](/assets/images/sdk-guide/sdk-guide-01-p01-i01.png)
+![Character in Snippets Portal & Unity SDK Sample scene in Play Mode](/assets/images/sdk-guide/sdk-guide-02-p01-i02.png)
+
+---
+
+## 2. Requirements
+
+- Unity 6.3 LTS (6000.3.x), Unity 6.0 LTS (6000.0.x) or Unity 2022.3 LTS (2022.3.x)
+- Snippets account
+- Internet access for package/cloud operations
+- Git installed if using Git URL installation (recommended)
+
+![02-requirements-unity-version.png](/assets/images/sdk-guide/sdk-guide-03-p02-i01.png)
+Capture: Unity Hub showing project on 2022.3.x.
+
+---
+
+## 3. Installation
+
+### 3.1 Configure OpenUPM scoped registry
+
+Required scopes:
+
+- `com.cysharp.unitask`
+- `org.khronos.unitygltf`
+
+Unity UI procedure:
+
+1. `Edit > Project Settings > Package Manager`
+2. Add Scoped Registry:
+Name: `OpenUPM`  
+URL: `https://package.openupm.com`  
+Scopes: `com.cysharp.unitask`, `org.khronos.unitygltf`
+
+Option B (alternative): Manual `manifest.json` procedure:
+
+```json
+{
+  "scopedRegistries": [
     {
-    "dependencies": {
-        ...
-    },
-    "scopedRegistries": [
-        {
-            "name": "OpenUPM",
-            "url": "https://package.openupm.com",
-            "scopes": [
-                "com.cysharp.unitask",
-                "org.khronos.unitygltf"
-                ]
-            }
-        ]
+      "name": "OpenUPM",
+      "url": "https://package.openupm.com",
+      "scopes": [
+        "com.cysharp.unitask",
+        "org.khronos.unitygltf"
+      ]
     }
+  ]
+}
 ```
 
----
+### 3.2 Install Snippets SDK package
 
-##2\. **Install Snippets SDK Package to Unity**
-Navigate to [https://www.snippets3d.com/integrations](https://www.snippets3d.com/integrations). 
-Here you will find the latest download of the SnippetsSDK.
+Recommended: install from Git URL to get updates and keep team environments consistent.
 
-**You have the following installation options:**
+Git URL method:
 
-###2a\. **Install Package via Git URL (Recommended)**
-Click "Copy" to copy the git url.
+1. `Window > Package Manager`
+2. `+` button
+3. `Add package from git URL` (find the URL at [https://app.snippets3d.com/integrations](https://app.snippets3d.com/integrations))
+4. Paste SDK Git URL
+5. Install
 
-In Unity, Open the Unity Package Manager (`Window -> Package Manager`) and click on the + button in the top left corner. Select *Install package from git url...* and paste the Git URL. It will automatically download and install. You can check for updates by periodically clicking "Update".
+Disk method (ZIP fallback):
 
-###2b\. **Download and Install Package from Disk**
-Click Download the ZIP file, and extract it to a folder in your project. (NOT in the Assets folder).
+1. Download and unzip SDK outside `Assets`
+2. `Window > Package Manager`
+3. `+` button
+4. `Add package from disk` (download package at [https://app.snippets3d.com/integrations](https://app.snippets3d.com/integrations))
+5. Select `package.json`
 
-In Unity, Open the Unity Package Manager (`Window -> Package Manager`) and click on the + button in the top left corner. Select *Install package from disk...* and navigate to the `package.json` file in the Snippets SDK folder you just added.
-    -Wait for the package manager to do all the heavy lifting. It may take a few minutes.
+![Copy git URL or download ZIP](/assets/images/sdk-guide/sdk-guide-04-p03-i01.png)
+![Install Snippets SDK via git URL using Unity Package Manager](/assets/images/sdk-guide/sdk-guide-05-p04-i01.png)
 
----
+### 3.3 Import TMP essentials (recommended)
 
-##3\. **Import the TextMeshPro Essentials**
-If you don't have TextMeshPro in your project, you can import it by clicking on the *Import TMP Essentials* button in the `Window -> TextMeshPro -> Import TMP Essential Resources` menu.
+For better text quality and consistency:
 
----
+1. `Window > TextMeshPro > Import TMP Essential Resources`
+2. Confirm import
 
-##4\. **Create a template**
+![Importing TextMeshPro Essential Resources](/assets/images/sdk-guide/sdk-guide-06-p04-i02.png)
 
-You can create your own custom template, or use the sample template we've provided in `Packages/com.snippets.sdk/Editor/SnippetsTemplates/SnippetTemplate.prefab`. Let's drag that into our project folder for now.
+### 3.4 Import sample scenes (recommended)
 
----
+1. Open Package Manager and select Snippets SDK (after installing it)
+2. Open `Samples` tab
+3. Import Snippets Sample Scenes
+4. Open sample scenes and run Play Mode
 
-##5\. **Be careful of the conflicts**
-The Snippets SDK uses UnityGLTF to load GLTF files, and it may conflict with other packages that import GLTF files, like glTFast.
+![Importing Sample Scenes & path to the Scenes after import](/assets/images/sdk-guide/sdk-guide-07-p05-i01.png)
