@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://docs.snippets3d.com/latest/SDK/snippets-project-folders/">
       
       
-        <link rel="prev" href="../../getting-started/troubleshooting/">
+        <link rel="prev" href="../initial-setup-in-unity/">
       
       
         <link rel="next" href="../import-update-remove-snippet-sets/">
@@ -228,12 +228,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../getting-started/create-your-first-snippet-set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Your First Snippet Set
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/previewing-and-publishing-snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Previewing and Publishing Snippets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../getting-started/sdk-installation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Installation
+    SDK Installation
     
   </span>
   
@@ -251,58 +297,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/initial-setup-in-unity/" class="md-nav__link">
+      <a href="../../getting-started/sdk-first-import/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Initial Setup in Unity
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting-started/recommended-validation-path/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Recommended Validation Path
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting-started/troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Troubleshooting
+    SDK First Import
     
   </span>
   
@@ -359,6 +359,75 @@
             SDK
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initial-setup-in-unity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Initial Setup in Unity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -531,6 +600,52 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recommended-validation-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recommended Validation Path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -597,26 +712,27 @@
 <h1 id="5-snippets-project-folders">5. Snippets project folders</h1>
 <p><strong>Default behavior:</strong></p>
 <ul>
-<li>Generated root: Assets/My Snippets -&gt; this is where your snippets prefabs are imported</li>
-<li>Raw setting default: Assets/My Snippets/Raw -&gt; this setting defines the raw subfolder name created inside
+<li>Generated root: <code>Assets/My Snippets</code> -&gt; this is where your snippets prefabs are imported</li>
+<li>Raw setting default: <code>Assets/My Snippets/Raw</code> -&gt; this setting defines the raw subfolder name created inside
 each imported set folder.</li>
 </ul>
 <p><strong>Effective per-set structure used by the SDK:</strong></p>
 <ul>
-<li>Generated: &lt;GeneratedRoot&gt;/&lt;SetName&gt;</li>
-<li>Raw: &lt;GeneratedRoot&gt;/&lt;SetName&gt;/Raw (or custom raw subfolder name)</li>
+<li>Generated: <code>&lt;GeneratedRoot&gt;/&lt;SetName&gt;</code></li>
+<li>Raw: <code>&lt;GeneratedRoot&gt;/&lt;SetName&gt;/Raw</code> (or custom raw subfolder name)</li>
 </ul>
 <p><strong>Example:</strong></p>
 <ul>
-<li>Assets/My Snippets/Doctor</li>
-<li>Assets/My Snippets/Doctor/Raw
-Path configured in ProjectSnippetsSettings.asset. If you do not see it directly, search for
-<code>ProjectSnippetsSettings</code> in the Project window.</li>
+<li><code>Assets/My Snippets/Doctor</code></li>
+<li><code>Assets/My Snippets/Doctor/Raw</code></li>
 </ul>
+<p>Path is configured in <code>ProjectSnippetsSettings.asset</code>. If you do not see it directly, search for
+<code>ProjectSnippetsSettings</code> in the Project window.</p>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-09-image-01.png" /></p>
-<p>Screenshot: Snippets automatic import folder including subfolder / snippet set and nested “raw” folder</p>
+<p class="screenshot-caption">Snippets automatic import folder including subfolder / snippet set and nested “raw” folder</p>
+
 <hr />
-<p><a href="/getting-started/initial-setup-in-unity.md">← Previous: Initial Setup In Unity</a><br />
+<p><a href="/SDK/initial-setup-in-unity.md">← Previous: Initial Setup In Unity</a><br />
 <a href="/SDK/import-update-remove-snippet-sets.md">Next: Import, Update, Remove Snippet Sets →</a></p>
 
 

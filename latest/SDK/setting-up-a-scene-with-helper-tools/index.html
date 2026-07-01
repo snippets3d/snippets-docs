@@ -228,12 +228,58 @@
   
   
     <li class="md-nav__item">
+      <a href="../../getting-started/create-your-first-snippet-set/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Create Your First Snippet Set
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/previewing-and-publishing-snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Previewing and Publishing Snippets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../getting-started/sdk-installation/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Installation
+    SDK Installation
     
   </span>
   
@@ -251,58 +297,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/initial-setup-in-unity/" class="md-nav__link">
+      <a href="../../getting-started/sdk-first-import/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Initial Setup in Unity
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting-started/recommended-validation-path/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Recommended Validation Path
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../getting-started/troubleshooting/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Troubleshooting
+    SDK First Import
     
   </span>
   
@@ -359,6 +359,75 @@
             SDK
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../initial-setup-in-unity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Initial Setup in Unity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -653,6 +722,52 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../recommended-validation-path/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recommended Validation Path
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -821,7 +936,7 @@ multi-actor). It is the best path when you need sequencing, movement, or gaze co
 <p><strong>Use this order to avoid debugging too many systems at once:</strong></p>
 <ol>
 <li>Place snippet prefabs in the scene.</li>
-<li>For automated setup navigate to Snippets -&gt; Scene-Auto Setup. This will set up
+<li>For automated setup navigate to <code>Snippets &gt; Scene-Auto Setup</code>. This will set up
 helper-tools/snippet components automatically, for you to customise.</li>
 <li>Alternatively, for manual setup: Configure SnippetsActorRegistry.</li>
 <li>Validate playback with SnippetsSimpleController.</li>
@@ -830,6 +945,7 @@ helper-tools/snippet components automatically, for you to customise.</li>
 <li>Add gaze (SnippetsGazeDriver + SnippetsGazeFlowController) last.
 This progression gives you a clean baseline before layering more behavior.</li>
 </ol>
+<hr />
 <h2 id="82-place-your-actorsnippet-prefabs-in-the-scene">8.2 Place your actor/snippet prefabs in the scene</h2>
 <ol>
 <li>Decide how many actors (characters) you will have in the scene and drag in one snippet prefab
@@ -838,10 +954,11 @@ for each character.</li>
 <li>Rename them with easy to remember identifiers (like their names or roles).</li>
 <li>After placing one snippet instance for each actor in the scene, you can use <code>Snippets &gt; Scene Auto
 Setup</code> to generate the initial runtime setup (Steps will be provided) or you can set up scene
-manulally.</li>
+manually.</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-13-image-01.png" /></p>
 <p>Screenshot to add: Two snippets added to the scene renamed “Doctor” and “Nurse”</p>
+<hr />
 <h2 id="83-manual-set-up-create-and-configure-snippetsactorregistry">8.3 Manual Set-up: Create and configure SnippetsActorRegistry</h2>
 <ol>
 <li>Add SnippetsActorRegistry component.</li>
@@ -849,9 +966,9 @@ manulally.</li>
 <li>For each actor, assign:</li>
 <li>player (SnippetPlayer)</li>
 <li>snippets list (all snippet prefabs you will use for that actor)</li>
-<li>idleClip - find sample idleClip in SnippetsSDK\Runtime\Assets\Animations\</li>
+<li>idleClip - find sample idleClip in <code>SnippetsSDK\Runtime\Assets\Animations\</code></li>
 <li>walkClip (if movement will be used) - sample walkClip in
-SnippetsSDK\Runtime\Assets\Animations\</li>
+<code>SnippetsSDK\Runtime\Assets\Animations\</code></li>
 <li>walker (optional, if using movement) -&gt; instructions in next points</li>
 <li>gazeDriver (optional, if using gaze) -&gt; instructions in next points</li>
 </ol>
@@ -863,14 +980,16 @@ under the player hierarchy.</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-14-image-01.png" /></p>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-15-image-01.png" /></p>
-<p>Screenshot: ActorRegistry component with Doctor and Nurse actors attached</p>
+<p class="screenshot-caption">ActorRegistry component with Doctor and Nurse actors attached</p>
+
+<hr />
 <h2 id="84-snippet-scene-auto-setup">8.4 Snippet Scene Auto-Setup</h2>
 <p>Scene Auto Setup is a fast way to create the basic runtime structure needed for a controller-driven Snippets scene. It
 is useful when you want the SDK to automatically add the main helper components, prepare the initial scene wiring,
 and give you a starting point that you can customize afterward.
 1. Place one Snippet prefab for each actor into the scene (recommended: rename each
 snippet actor prefab with their character name).
-2. In the top menu, go to Snippets &gt; Scene Auto Setup.</p>
+2. In the top menu, go to <code>Snippets &gt; Scene Auto Setup</code>.</p>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-16-image-01.png" /></p>
 <ol>
 <li>In the Scene Auto Setup window, assign the Snippet instances you want to use in the
@@ -889,6 +1008,7 @@ includes: Actor Registry, Flow Controller, Gaze Flow Controller, Simple Controll
 then adjust the setup for your specific use case.</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-18-image-02.png" /></p>
+<hr />
 <h2 id="85-validate-with-snippetssimplecontroller-first-runtime-test">8.5 Validate with SnippetsSimpleController (first runtime test)</h2>
 <p>Before building a sequence, test the registry setup with a simple trigger.
 1. Add SnippetsSimpleController to a GameObject (for clarity make one called SimpleController).
@@ -907,7 +1027,9 @@ needed, and completion policy.
 <li>It isolates setup issues before you build longer flow sequences.</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-19-image-01.png" /></p>
-<p>Screenshot: SimpleController testing playing Snippet “DoctorSnippet1” by actor “Doctor”</p>
+<p class="screenshot-caption">SimpleController testing playing Snippet “DoctorSnippet1” by actor “Doctor”</p>
+
+<hr />
 <h2 id="85-add-movement-with-snippetswalker-optional">8.5 Add movement with SnippetsWalker (optional)</h2>
 <p>If actors need to move between points:
 1. Add SnippetsWalker to the actor root (or movement parent object).
@@ -927,7 +1049,9 @@ c. Tune agent settings</p>
 <li>Re-test using SnippetsSimpleController with Action = Walk.</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-20-image-01.png" /></p>
-<p>Screenshot: Doctor with the Snippets Walker component attached</p>
+<p class="screenshot-caption">Doctor with the Snippets Walker component attached</p>
+
+<hr />
 <h2 id="86-build-a-sequence-with-snippetsflowcontroller">8.6 Build a sequence with SnippetsFlowController</h2>
 <p>Use SnippetsFlowController when you want controlled steps such as “speak, walk, pause, speak.”
 1. Add SnippetsFlowController to a new GameObject called “FlowController”.
@@ -994,7 +1118,9 @@ remains snippet controlled).</li>
 <li>Expand after baseline flow is working.</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-26-image-01.png" /></p>
-<p>Screenshot: Snippets Flow Controller example implementation</p>
+<p class="screenshot-caption">Snippets Flow Controller example implementation</p>
+
+<hr />
 <h2 id="87-add-gaze-behavior-snippetsgazedriver-optional-but-recommended-for-conversations">8.7 Add gaze behavior (SnippetsGazeDriver) (optional, but recommended for conversations)</h2>
 <p>SnippetsGazeDriver adds procedural gaze behavior to an actor. It is useful when you want a character to
 turn their head, eyes, and upper body toward a target, instead of relying only on the animation already
@@ -1016,6 +1142,7 @@ c. Waist follow values</li>
 <li>Assign gazeDriver in the actor entry of SnippetsActorRegistry (or rely on auto-find if appropriate).</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-27-image-01.png" /></p>
+<hr />
 <h2 id="88-synchronize-gaze-with-flow-using-snippetsgazeflowcontroller">8.8 Synchronize gaze with flow using SnippetsGazeFlowController</h2>
 <p>Once your flow is stable, add gaze choreography.
 1. Add SnippetsGazeFlowController to the runtime/controller object.
@@ -1036,7 +1163,9 @@ Screenshot to add: 28-gaze-flow-controller-sync.png
 Capture: SnippetsGazeFlowController with flow, registry, and Sync controls.</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-28-image-01.png" /></p>
-<p>Screenshot: GazeFlow implementation example</p>
+<p class="screenshot-caption">GazeFlow implementation example</p>
+
+<hr />
 <h2 id="89-final-controller-based-validation-checklist">8.9 Final controller-based validation checklist</h2>
 <p><strong>Before considering the scene ready:</strong></p>
 <ol>
