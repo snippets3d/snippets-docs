@@ -1,0 +1,25 @@
+:root  > * {
+    --md-primary-fg-color:        #1A1A1C;
+    --md-primary-fg-color--light: #ECB7B7;
+    --md-primary-fg-color--dark:  #90030C;
+    --md-primary-bg-color: white;
+    --md-primary-fg-color: white;
+  }
+
+  
+
+.md-header {
+    background: #1A1A1C;
+}
+
+.md-header .md-header__topic{ 
+  font-size: 1rem;
+  font-weight: 200;
+}
+.screenshot-caption {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--md-default-fg-color--light);
+  margin: -0.25rem 0 1rem;
+}
+
