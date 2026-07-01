@@ -44,9 +44,9 @@ You can also control the **duration** of your snippet set using the slider provi
 
 ---
 
-### Option 3: Create from Audio *(Coming Soon)*
+### Option 3: Create from Audio
 
-This upcoming feature allows you to upload an **audio file**, and Snippets3D will automatically create a snippet based on the audio provided.
+This feature allows you to upload an **audio file**, and Snippets3D will automatically create a snippet based on the audio provided.
 
 > ⚠️ *Note: This feature does not use AI-generated voices – your original audio is preserved.*
 
@@ -60,37 +60,14 @@ If you prefer to build everything manually, select:
 
 ---
 
-## Step 3: Select Rig and Voice
+## Step 3: Select Character
 
-For each snippet or snippet set, you can choose:
+For each snippet or snippet set, you can choose a character.
 
-- A **Voice**
-- A **Rig**
-
-![Paste Script Option Placeholder](/assets/images/getting-started/create-your-first-snippet-set/rig-voice.png)
+![Paste Script Option Placeholder](/assets/images/getting-started/create-your-first-snippet-set/character-dropdown.png)
 
 
----
 
-### Voice
-The voice determines how the character sounds.  
-Click the **▶️** button next to a voice name to preview it.
-
----
-
-### Rig
-The rig determines the 3D character model.  
-Currently supported:
-
-- **Ready Player Me Male**
-
-Coming soon:
-
-- Ready Player Me Female  
-- Character Creator Male & Female  
-- Mixamo Male & Female
-
----
 
 When you are finished, click "Snippify" and our system will start building your Snippet Set! 🎉
 

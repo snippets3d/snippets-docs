@@ -6,11 +6,11 @@ theme:
       - version
       - content.code.copy
   palette:
-    scheme: 'slate'  # This sets the theme to a dark palette
-    primary: 'custom'  # Change primary color (e.g., links, buttons)
-    accent: 'blue'  # Accent color
-  logo: 'assets/images/snippets_logo_dark_bg.svg'  # Optional: If you want to add a logo
-  favicon: 'assets/images/favicon.ico'  # Optional: Add a favicon
+    scheme: slate
+    primary: custom
+    accent: blue
+  logo: assets/images/snippets_logo_dark_bg.svg
+  favicon: assets/images/favicon.ico
 extra_css:
 - stylesheets/extra.css
 extra:
@@ -19,7 +19,7 @@ extra:
 plugins:
   - mike:
       canonical_version: latest
-site_name: Snippets SDK Documentation
+site_name: Snippets Documentation
 
 nav:
   - Home: index.md
@@ -29,7 +29,16 @@ nav:
       - SDK Installation: getting-started/sdk-installation.md
       - SDK First Import: getting-started/sdk-first-import.md
   - SDK:
-      - Create a Snippet Template: SDK/create-a-snippet-template.md
-      - Customizing Folders: SDK/customizing-folders.md
+      - Overview: SDK/overview.md
+      - Installation: SDK/installation.md
+      - Initial Setup in Unity: SDK/initial-setup-in-unity.md
+      - Snippets Project Folders: SDK/snippets-project-folders.md
+      - Import, Update, Remove Snippet Sets: SDK/import-update-remove-snippet-sets.md
+      - Bringing Imported Snippets Into a Scene: SDK/bringing-imported-snippets-into-a-scene.md
+      - Setting Up a Scene With Helper Tools: SDK/setting-up-a-scene-with-helper-tools.md
+      - Template and Playback Modes: SDK/template-and-playback-modes.md
+      - Helper Tools: SDK/helper-tools.md
+      - Programmer Integration Guide: SDK/programmer-integration-guide.md
+      - Recommended Validation Path: SDK/recommended-validation-path.md
+      - Troubleshooting: SDK/troubleshooting.md
   - Definitions: definitions.md
-

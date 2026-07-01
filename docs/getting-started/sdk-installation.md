@@ -3,7 +3,7 @@
 Follow these steps to install the Snippets SDK:
 
 ##1\. **Add OpenUPM to the scoped registries of your project**
-Open the Packages/manifest.json file in the folder of your project and add the following lines:
+Open the `Packages/manifest.json` file in the folder of your project and add the following lines:
 ```
     {
     "dependencies": {
