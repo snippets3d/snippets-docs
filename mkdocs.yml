@@ -17,6 +17,7 @@ extra:
   version:
     provider: mike
 plugins:
+  - search
   - mike:
       canonical_version: latest
 site_name: Snippets Documentation

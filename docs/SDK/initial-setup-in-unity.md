@@ -14,7 +14,7 @@ successfully.
 
 ## 4.2 Log in
 
-1. Snippets > Log In
+1. `Snippets > Log In`
 2. Enter credentials (same as on the web portal)
 3. Confirm successful login
 
@@ -26,7 +26,7 @@ successfully.
 
 ## 4.3 Open set management
 
-1. Snippets > Import or Update Snippet Sets
+1. `Snippets > Import or Update Snippet `Sets`
 2. Review set statuses and actions
 
 **Status labels:**

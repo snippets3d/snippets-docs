@@ -31,7 +31,7 @@ manually.
 
 ![Screenshot](/assets/images/sdk-documentation/page-13-image-01.png)
 
-Screenshot to add: Two snippets added to the scene renamed “Doctor” and “Nurse”
+Two snippets added to the scene renamed “Doctor” and “Nurse”
 
 ---
 
@@ -40,13 +40,13 @@ Screenshot to add: Two snippets added to the scene renamed “Doctor” and “N
 1. Add SnippetsActorRegistry component.
 2. Add one Actor entry per character.
 3. For each actor, assign:
-- player (SnippetPlayer)
-- snippets list (all snippet prefabs you will use for that actor)
-- idleClip - find sample idleClip in `SnippetsSDK\Runtime\Assets\Animations\`
-- walkClip (if movement will be used) - sample walkClip in
-`SnippetsSDK\Runtime\Assets\Animations\`
-- walker (optional, if using movement) -> instructions in next points
-- gazeDriver (optional, if using gaze) -> instructions in next points
+    - player (SnippetPlayer)
+    - snippets list (all snippet prefabs you will use for that actor)
+    - idleClip - find sample idleClip in `SnippetsSDK\Runtime\Assets\Animations\`
+    - walkClip (if movement will be used) - sample walkClip in
+    `SnippetsSDK\Runtime\Assets\Animations\`
+    - walker (optional, if using movement) -> instructions in next points
+    - gazeDriver (optional, if using gaze) -> instructions in next points
 
 **Notes:**
 
@@ -98,11 +98,10 @@ Before building a sequence, test the registry setup with a simple trigger.
 1. Add SnippetsSimpleController to a GameObject (for clarity make one called SimpleController).
 2. Assign the SnippetsActorRegistry.
 3. Choose:
-a. Action = Snippet, Walk, Pause, Custom Animation, or Snippet + Custom Animation
-b. Actor
-c. Snippet or Waypoint
-d. If you use Snippet + Custom Animation, also choose the custom animation, snippet mask if
-needed, and completion policy.
+    - a. Action = Snippet, Walk, Pause, Custom Animation, or Snippet + Custom Animation
+    - b. Actor
+    - c. Snippet or Waypoint
+    - d. If you use Snippet + Custom Animation, also choose the custom animation, snippet mask if needed, and completion policy.
 4. Optionally enable keyboard trigger (default is useful for quick tests).
 5. Enter Play Mode and press the configured key or use inspector buttons.
 
@@ -120,17 +119,18 @@ needed, and completion policy.
 ## 8.5 Add movement with SnippetsWalker (optional)
 
 If actors need to move between points:
+
 1. Add SnippetsWalker to the actor root (or movement parent object).
 2. Create waypoint transforms in the scene.
 3. Assign waypoints in order to the walker.
 4. Configure movement values:
-a. moveSpeed
-b. arriveDistance
-c. turnSpeed
+    - a. moveSpeed
+    - b. arriveDistance
+    - c. turnSpeed
 5. If using NavMesh:
-a. Enable useNavMesh
-b. Assign NavMeshAgent
-c. Tune agent settings
+    - a. Enable useNavMesh
+    - b. Assign NavMeshAgent
+    - c. Tune agent settings
 
 **Then:**
 
@@ -146,16 +146,17 @@ c. Tune agent settings
 ## 8.6 Build a sequence with SnippetsFlowController
 
 Use SnippetsFlowController when you want controlled steps such as “speak, walk, pause, speak.”
+
 1. Add SnippetsFlowController to a new GameObject called “FlowController”.
 2. Assign the SnippetsActorRegistry.
 3. Configure flow options (Play On Start, Loop Sequence, Auto Progress, Keyboard key):
 4. Add steps in the Steps list.
 5. For each step choose:
-a. Snippet: actor + snippet name/index
-b. Walk: actor + waypoint name/index
-c. Pause: timed pause or wait-for-trigger
-d. Custom Animation: actor + custom animation name/index
-e. Snippet + Custom Animation: actor + snippet + custom animation
+    - a. Snippet: actor + snippet name/index
+    - b. Walk: actor + waypoint name/index
+    - c. Pause: timed pause or wait-for-trigger
+    - d. Custom Animation: actor + custom animation name/index
+    - e. Snippet + Custom Animation: actor + snippet + custom animation
 
 **Custom animations and Mixamo Support:**
 
@@ -163,12 +164,13 @@ Custom Animation lets you play an animation clip that is separate from the Snipp
 when you want an actor to perform an extra motion, such as a gesture, reaction, or body action, either on its own or
 together with a Snippet (f.e. Keep the facial animation and voice of a snippet but use a custom animation). We made
 it especially easy to integrate Mixamo animations.
+
 1. Download the animation from Mixamo.com
 
 ![Screenshot](/assets/images/sdk-documentation/page-21-image-01.png)
 
 2. Import the downloaded animation into your Unity project.
-3. In Unity, go to Snippets > Extra > MixamoToSnippets. This will make the animation
+3. In Unity, go to `Snippets > Extra > MixamoToSnippets`. This will make the animation
 compatible with the default stylized characters from the Snippets platform.
 
 ![Screenshot](/assets/images/sdk-documentation/page-22-image-01.png)
@@ -231,14 +233,14 @@ included in the Snippet.
 2. Use the Auto Setup button in the Gaze Driver inspector first, then review the detected references
 manually.
 3. Assign or correct the required rig references:
-a. headBone
-b. waistBone f.e. “spline” (recommended for better body follow)
-c. leftEyeBone / rightEyeBone (optional, but recommended for dynamic eye follow)
-d. faceMesh / eyelid blendshapes (optional, if using eyelid follow)
+    - a. headBone
+    - b. waistBone f.e. “spline” (recommended for better body follow)
+    - c. leftEyeBone / rightEyeBone (optional, but recommended for dynamic eye follow)
+    - d. faceMesh / eyelid blendshapes (optional, if using eyelid follow)
 4. Configure a basic starting setup:
-a. Mode: FollowTarget or LookInFront
-b. Look limits and smoothing
-c. Waist follow values
+    - a. Mode: FollowTarget or LookInFront
+    - b. Look limits and smoothing
+    - c. Waist follow values
 5. Assign gazeDriver in the actor entry of SnippetsActorRegistry (or rely on auto-find if appropriate).
 
 ![Screenshot](/assets/images/sdk-documentation/page-27-image-01.png)
@@ -250,14 +252,13 @@ c. Waist follow values
 Once your flow is stable, add gaze choreography.
 1. Add SnippetsGazeFlowController to the runtime/controller object.
 2. Assign:
-- flow (SnippetsFlowController)
-- registry (SnippetsActorRegistry)
+    - flow (SnippetsFlowController)
+    - registry (SnippetsActorRegistry)
 3. Click Sync Now so gaze steps mirror flow steps.
 4. Choose UnspecifiedActorBehavior (recommended starting point: KeepPrevious).
 5. Configure gaze per step:
-- Simple mode for step-level gaze changes (one gaze change / step)
-- Granular mode for cue-based changes during a snippet (percent-based) - f.e. “when
-snippet 1 reaches 20% of play time this gaze change occurs”
+    - Simple mode for step-level gaze changes (one gaze change / step)
+    - Granular mode for cue-based changes during a snippet (percent-based) - f.e. “when snippet 1 reaches 20% of play time this gaze change occurs”
 
 **Recommended first setup:**
 
@@ -282,7 +283,7 @@ Capture: SnippetsGazeFlowController with flow, registry, and Sync controls.
 4. Gaze behavior matches expected targets.
 5. Controller-driven actors should not rely on standalone Play On Enable at the same time.
 6. No recurring Console warnings/errors during repeated runs.
-TIP: Review and experiment with the Demo Scenes provided with the SDK. All helper tools are
+**TIP**: Review and experiment with the Demo Scenes provided with the SDK. All helper tools are
 implemented and present flows which utilize all features described.
 
 ---

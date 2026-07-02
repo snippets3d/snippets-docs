@@ -20,7 +20,7 @@ Mental model:
 1. Create and publish content in the Snippets web portal.
 2. Import that content into Unity through the SDK.
 3. Choose your playback mode: standalone snippet playback or controller-based orchestration.
-4. For controller-based orchestration, you can set up scene manually or navigate to Snippets > Scene Auto
+4. For controller-based orchestration, you can set up scene manually or navigate to `Snippets > Scene Auto`
    Setup. This can generate the initial runtime setup, with the base snippet helper-tool components
    automatically set-up in scene.
 

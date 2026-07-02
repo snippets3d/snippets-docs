@@ -28,11 +28,11 @@ Keep all existing dependencies unchanged.
 - com.cysharp.unitask
 - org.khronos.unitygltf
 
-1. Edit > Project Settings > Package Manager
+1. `Edit > Project Settings > Package Manager`
 2. Add Scoped Registry:
 Name: OpenUPM
-URL: https://package.openupm.com
-Scopes: com.cysharp.unitask, org.khronos.unitygltf
+URL: `https://package.openupm.com`
+Scopes: `com.cysharp.unitask`, `org.khronos.unitygltf`
 
 ![Screenshot](/assets/images/sdk-documentation/page-02-image-01.png)
 
@@ -59,8 +59,8 @@ Recommended: install from Git URL to get updates and keep team environments cons
 
 **Git URL method:**
 
-1. Window > Package Manager
-2. + button
+1. `Window > Package Manager`
+2. Click the "+" button
 3. Add package from git URL (find the URL at [the integrations page](https://app.snippets3d.com/integrations))
 4. Paste SDK Git URL
 5. Install
@@ -68,8 +68,8 @@ Recommended: install from Git URL to get updates and keep team environments cons
 **Disk method (ZIP fallback):**
 
 1. Download and unzip SDK outside Assets
-2. Window > Package Manager
-3. + button
+2. `Window > Package Manager`
+3. Click the "+" button
 4. Add package from disk (download package at [the integrations page](https://app.snippets3d.com/integrations))
 5. Select package.json
 
@@ -87,7 +87,7 @@ Recommended: install from Git URL to get updates and keep team environments cons
 
 **For better text quality and consistency:**
 
-1. Window > TextMeshPro > Import TMP Essential Resources
+1. `Window > TextMeshPro > Import TMP Essential Resources`
 2. Confirm import
 
 ![Screenshot](/assets/images/sdk-documentation/page-05-image-01.png)
