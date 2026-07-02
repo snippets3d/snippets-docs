@@ -125,6 +125,46 @@
     
     
     
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
     
   </nav>
   
@@ -957,13 +997,13 @@ Setup</code> to generate the initial runtime setup (Steps will be provided) or y
 manually.</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-13-image-01.png" /></p>
-<p>Screenshot to add: Two snippets added to the scene renamed “Doctor” and “Nurse”</p>
+<p>Two snippets added to the scene renamed “Doctor” and “Nurse”</p>
 <hr />
 <h2 id="83-manual-set-up-create-and-configure-snippetsactorregistry">8.3 Manual Set-up: Create and configure SnippetsActorRegistry</h2>
 <ol>
 <li>Add SnippetsActorRegistry component.</li>
 <li>Add one Actor entry per character.</li>
-<li>For each actor, assign:</li>
+<li>For each actor, assign:<ul>
 <li>player (SnippetPlayer)</li>
 <li>snippets list (all snippet prefabs you will use for that actor)</li>
 <li>idleClip - find sample idleClip in <code>SnippetsSDK\Runtime\Assets\Animations\</code></li>
@@ -971,6 +1011,8 @@ manually.</li>
 <code>SnippetsSDK\Runtime\Assets\Animations\</code></li>
 <li>walker (optional, if using movement) -&gt; instructions in next points</li>
 <li>gazeDriver (optional, if using gaze) -&gt; instructions in next points</li>
+</ul>
+</li>
 </ol>
 <p><strong>Notes:</strong></p>
 <ol>
@@ -1014,11 +1056,10 @@ then adjust the setup for your specific use case.</li>
 1. Add SnippetsSimpleController to a GameObject (for clarity make one called SimpleController).
 2. Assign the SnippetsActorRegistry.
 3. Choose:
-a. Action = Snippet, Walk, Pause, Custom Animation, or Snippet + Custom Animation
-b. Actor
-c. Snippet or Waypoint
-d. If you use Snippet + Custom Animation, also choose the custom animation, snippet mask if
-needed, and completion policy.
+    - a. Action = Snippet, Walk, Pause, Custom Animation, or Snippet + Custom Animation
+    - b. Actor
+    - c. Snippet or Waypoint
+    - d. If you use Snippet + Custom Animation, also choose the custom animation, snippet mask if needed, and completion policy.
 4. Optionally enable keyboard trigger (default is useful for quick tests).
 5. Enter Play Mode and press the configured key or use inspector buttons.</p>
 <p><strong>Why this step matters:</strong></p>
@@ -1031,18 +1072,24 @@ needed, and completion policy.
 
 <hr />
 <h2 id="85-add-movement-with-snippetswalker-optional">8.5 Add movement with SnippetsWalker (optional)</h2>
-<p>If actors need to move between points:
-1. Add SnippetsWalker to the actor root (or movement parent object).
-2. Create waypoint transforms in the scene.
-3. Assign waypoints in order to the walker.
-4. Configure movement values:
-a. moveSpeed
-b. arriveDistance
-c. turnSpeed
-5. If using NavMesh:
-a. Enable useNavMesh
-b. Assign NavMeshAgent
-c. Tune agent settings</p>
+<p>If actors need to move between points:</p>
+<ol>
+<li>Add SnippetsWalker to the actor root (or movement parent object).</li>
+<li>Create waypoint transforms in the scene.</li>
+<li>Assign waypoints in order to the walker.</li>
+<li>Configure movement values:<ul>
+<li>a. moveSpeed</li>
+<li>b. arriveDistance</li>
+<li>c. turnSpeed</li>
+</ul>
+</li>
+<li>If using NavMesh:<ul>
+<li>a. Enable useNavMesh</li>
+<li>b. Assign NavMeshAgent</li>
+<li>c. Tune agent settings</li>
+</ul>
+</li>
+</ol>
 <p><strong>Then:</strong></p>
 <ol>
 <li>Assign this walker to the actor entry in SnippetsActorRegistry.</li>
@@ -1053,27 +1100,33 @@ c. Tune agent settings</p>
 
 <hr />
 <h2 id="86-build-a-sequence-with-snippetsflowcontroller">8.6 Build a sequence with SnippetsFlowController</h2>
-<p>Use SnippetsFlowController when you want controlled steps such as “speak, walk, pause, speak.”
-1. Add SnippetsFlowController to a new GameObject called “FlowController”.
-2. Assign the SnippetsActorRegistry.
-3. Configure flow options (Play On Start, Loop Sequence, Auto Progress, Keyboard key):
-4. Add steps in the Steps list.
-5. For each step choose:
-a. Snippet: actor + snippet name/index
-b. Walk: actor + waypoint name/index
-c. Pause: timed pause or wait-for-trigger
-d. Custom Animation: actor + custom animation name/index
-e. Snippet + Custom Animation: actor + snippet + custom animation</p>
+<p>Use SnippetsFlowController when you want controlled steps such as “speak, walk, pause, speak.”</p>
+<ol>
+<li>Add SnippetsFlowController to a new GameObject called “FlowController”.</li>
+<li>Assign the SnippetsActorRegistry.</li>
+<li>Configure flow options (Play On Start, Loop Sequence, Auto Progress, Keyboard key):</li>
+<li>Add steps in the Steps list.</li>
+<li>For each step choose:<ul>
+<li>a. Snippet: actor + snippet name/index</li>
+<li>b. Walk: actor + waypoint name/index</li>
+<li>c. Pause: timed pause or wait-for-trigger</li>
+<li>d. Custom Animation: actor + custom animation name/index</li>
+<li>e. Snippet + Custom Animation: actor + snippet + custom animation</li>
+</ul>
+</li>
+</ol>
 <p><strong>Custom animations and Mixamo Support:</strong></p>
 <p>Custom Animation lets you play an animation clip that is separate from the Snippet’s built-in playback. It is useful
 when you want an actor to perform an extra motion, such as a gesture, reaction, or body action, either on its own or
 together with a Snippet (f.e. Keep the facial animation and voice of a snippet but use a custom animation). We made
-it especially easy to integrate Mixamo animations.
-1. Download the animation from Mixamo.com</p>
+it especially easy to integrate Mixamo animations.</p>
+<ol>
+<li>Download the animation from Mixamo.com</li>
+</ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-21-image-01.png" /></p>
 <ol>
 <li>Import the downloaded animation into your Unity project.</li>
-<li>In Unity, go to Snippets &gt; Extra &gt; MixamoToSnippets. This will make the animation
+<li>In Unity, go to <code>Snippets &gt; Extra &gt; MixamoToSnippets</code>. This will make the animation
 compatible with the default stylized characters from the Snippets platform.</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-22-image-01.png" /></p>
@@ -1130,15 +1183,19 @@ included in the Snippet.</p>
 <li>Add SnippetsGazeDriver to each actor that should use procedural gaze.</li>
 <li>Use the Auto Setup button in the Gaze Driver inspector first, then review the detected references
 manually.</li>
-<li>Assign or correct the required rig references:
-a. headBone
-b. waistBone f.e. “spline” (recommended for better body follow)
-c. leftEyeBone / rightEyeBone (optional, but recommended for dynamic eye follow)
-d. faceMesh / eyelid blendshapes (optional, if using eyelid follow)</li>
-<li>Configure a basic starting setup:
-a. Mode: FollowTarget or LookInFront
-b. Look limits and smoothing
-c. Waist follow values</li>
+<li>Assign or correct the required rig references:<ul>
+<li>a. headBone</li>
+<li>b. waistBone f.e. “spline” (recommended for better body follow)</li>
+<li>c. leftEyeBone / rightEyeBone (optional, but recommended for dynamic eye follow)</li>
+<li>d. faceMesh / eyelid blendshapes (optional, if using eyelid follow)</li>
+</ul>
+</li>
+<li>Configure a basic starting setup:<ul>
+<li>a. Mode: FollowTarget or LookInFront</li>
+<li>b. Look limits and smoothing</li>
+<li>c. Waist follow values</li>
+</ul>
+</li>
 <li>Assign gazeDriver in the actor entry of SnippetsActorRegistry (or rely on auto-find if appropriate).</li>
 </ol>
 <p><img alt="Screenshot" src="/assets/images/sdk-documentation/page-27-image-01.png" /></p>
@@ -1147,14 +1204,13 @@ c. Waist follow values</li>
 <p>Once your flow is stable, add gaze choreography.
 1. Add SnippetsGazeFlowController to the runtime/controller object.
 2. Assign:
-- flow (SnippetsFlowController)
-- registry (SnippetsActorRegistry)
+    - flow (SnippetsFlowController)
+    - registry (SnippetsActorRegistry)
 3. Click Sync Now so gaze steps mirror flow steps.
 4. Choose UnspecifiedActorBehavior (recommended starting point: KeepPrevious).
 5. Configure gaze per step:
-- Simple mode for step-level gaze changes (one gaze change / step)
-- Granular mode for cue-based changes during a snippet (percent-based) - f.e. “when
-snippet 1 reaches 20% of play time this gaze change occurs”</p>
+    - Simple mode for step-level gaze changes (one gaze change / step)
+    - Granular mode for cue-based changes during a snippet (percent-based) - f.e. “when snippet 1 reaches 20% of play time this gaze change occurs”</p>
 <p><strong>Recommended first setup:</strong></p>
 <ol>
 <li>Start with Simple mode only.</li>
@@ -1175,7 +1231,7 @@ Capture: SnippetsGazeFlowController with flow, registry, and Sync controls.</li>
 <li>Gaze behavior matches expected targets.</li>
 <li>Controller-driven actors should not rely on standalone Play On Enable at the same time.</li>
 <li>No recurring Console warnings/errors during repeated runs.
-TIP: Review and experiment with the Demo Scenes provided with the SDK. All helper tools are
+<strong>TIP</strong>: Review and experiment with the Demo Scenes provided with the SDK. All helper tools are
 implemented and present flows which utilize all features described.</li>
 </ol>
 <hr />
